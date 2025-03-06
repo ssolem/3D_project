@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Look();
-        Debug.Log(_rigidbody.velocity.y);
     }
 
     private void Move()
