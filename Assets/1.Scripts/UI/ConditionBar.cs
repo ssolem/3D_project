@@ -20,7 +20,6 @@ public class ConditionBar : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(BarPercentage());
         bar.fillAmount = BarPercentage();
     }
 
