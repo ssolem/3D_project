@@ -4,23 +4,23 @@ using UnityEngine.UI;
 public class ConditionBar : MonoBehaviour
 {
     public float maxValue;
-    private float currentValue;
+    public float currentValue;
     public float startValue;
     public float passiveValue;
     public Image bar;
 
     private void Awake()
     {
-        bar = GetComponent<Image>();
+
     }
     void Start()
     {
         currentValue = startValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Debug.Log(BarPercentage());
         bar.fillAmount = BarPercentage();
     }
 
@@ -36,6 +36,6 @@ public class ConditionBar : MonoBehaviour
 
     public void Subtract(float value)
     {
-        currentValue = currentValue - value > 0 ? currentValue + value : 0;
+        currentValue = currentValue - value > 0 ? currentValue - value : 0;
     }
 }

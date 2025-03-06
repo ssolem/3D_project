@@ -9,7 +9,7 @@ public class PlayerCondition : MonoBehaviour
     ConditionBar hp { get {  return conditionUI.hp; } }
     ConditionBar sp { get { return conditionUI.sp; } }
 
-    
+    public float passiveHeight;
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class PlayerCondition : MonoBehaviour
     void Update()
     {
         HealStamina(sp.passiveValue *Time.deltaTime);
+        PassiveDamage();
     }
 
     public void HealStamina(float value)
@@ -36,8 +37,28 @@ public class PlayerCondition : MonoBehaviour
         sp.Subtract(value);
     }
 
+    public bool EnoughStamina(float value)
+    {
+        if (sp.currentValue < value) return false;
+        return true;
+    }
+
     public void LoseHealth(float value)
     {
         hp.Subtract(value);
+    }
+
+    public void Die()
+    {
+        Debug.Log("die");
+    }
+
+    void PassiveDamage()
+    {
+        Transform trans = GameManager.Instance.Player.transform;
+        if(trans.position.y > passiveHeight)
+        {
+            LoseHealth(hp.passiveValue * Time.deltaTime);
+        }
     }
 }
