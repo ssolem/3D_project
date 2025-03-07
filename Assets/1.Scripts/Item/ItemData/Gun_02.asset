@@ -13,15 +13,13 @@ MonoBehaviour:
   m_Name: Gun_02
   m_EditorClassIdentifier: 
   itemType: 0
-  itemName: "\uAD8C\uCD1D"
-  itemDescription: "\uBB34\uAC81\uC9C0\uB9CC \uC548\uC2EC\uC774 \uB418\uB294 \uAC83
-    \uAC19\uB2E4 (\uAC10\uC18C hp \uC0AD\uC81C, SP - 2)"
+  itemName: M16
+  itemDescription: "\uC6A9\uAE30\uAC00 \uBD88\uC5B4\uB0A0 \uAC83 \uAC19\uB2E4 (\uAC10\uC18C
+    hp -3)"
   itemImage: {fileID: 21300000, guid: 63d0cb012e1dade4880e47b41785870f, type: 3}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 1165672385429082200, guid: bdc74b9346bc2e84dbeddc4e958515b9, type: 3}
   stackable: 0
   maxStack: 0
   affectedStats:
   - affectType: 1
-    affectValue: 5
-  - affectType: 3
-    affectValue: 2
+    affectValue: 3

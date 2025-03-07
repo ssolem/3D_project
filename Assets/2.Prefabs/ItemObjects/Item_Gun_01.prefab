@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4938087754238362016}
   - component: {fileID: 8277597299305747761}
   - component: {fileID: 7079896522997456137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Item_Gun_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000eec748c97d90499cb88d4c08f5c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 5f7ce0b8330cf064e8ec862835223add, type: 2}
 --- !u!1 &8625431609457100647
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 2982474027820210604}
   - component: {fileID: 9139494748593247310}
   - component: {fileID: 5378937239753138730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FNFiveSeven_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 8394517338557818844}
   - component: {fileID: 9181600562012382977}
   - component: {fileID: 3332537331726248279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FNFiveSeven_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5814887255242350380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FN_Five_Seven
   m_TagString: Untagged
   m_Icon: {fileID: 0}

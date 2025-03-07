@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7741845159928250349}
   - component: {fileID: 7843571469938900907}
   - component: {fileID: 828132061376331245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrett_M82A1_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8479255122458505252}
   - component: {fileID: 5816206225595001730}
   - component: {fileID: 3951533447761289618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Item_Gun_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000eec748c97d90499cb88d4c08f5c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 0ae0d139ae2c455438cb0883a15a40d7, type: 2}
 --- !u!1 &4773168048028363015
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1734443437462691879}
   - component: {fileID: 4860170595120051103}
   - component: {fileID: 8805439063577545429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrett_M82A1_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7485522528608512044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrett_M82A1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5498209291703354962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Barrett_M82A1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

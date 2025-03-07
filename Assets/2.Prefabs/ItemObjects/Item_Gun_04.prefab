@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6260357703120701255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HK_MP5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7087757176217186044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_HK_MP5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 4717958538943213788}
   - component: {fileID: 2019937231134117137}
   - component: {fileID: 2833614939127413792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HK_MP5_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 6076979638554951944}
   - component: {fileID: 4142854477722962291}
   - component: {fileID: 7411145588646027703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Item_Gun_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000eec748c97d90499cb88d4c08f5c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 6a75c64829b33584c90c5b4fac2a7061, type: 2}
 --- !u!1 &8838889736326315107
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 4742637037429375908}
   - component: {fileID: 2327561180385130625}
   - component: {fileID: 944348906319014327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HK_MP5_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
