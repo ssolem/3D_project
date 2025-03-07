@@ -28,13 +28,13 @@ public class Slot : MonoBehaviour
     public void SetSlot()
     {
         slotImage.gameObject.SetActive(true) ;
-        slotImage = slotData.itemImage;
+        slotImage.sprite = slotData.itemImage;
         itemQuantity.text = quantity.ToString();
     }
 
     public void ClearSlot()
     {
-        slotImage = null ;
+        slotImage.sprite = null;
         itemQuantity.text = string.Empty;
         slotImage.gameObject.SetActive(false);
         slotData = null;

@@ -30,7 +30,7 @@ public class ItemData : ScriptableObject
     public ItemType itemType;
     public string itemName;
     public string itemDescription;
-    public Image itemImage;
+    public Sprite itemImage;
     public GameObject itemPrefab;
     public bool stackable;
     public int maxStack;

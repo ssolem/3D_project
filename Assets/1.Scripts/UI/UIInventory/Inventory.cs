@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
 
         for(int i = 0; i < slots.Length; i++)
         {
-            slots[i] = slotBoard.GetComponentInChildren<Slot>();
+            slots[i] = slotBoard.GetChild(i).GetComponent<Slot>(); //GetChild 까먹지 말기..
             slots[i].index = i;
             slots[i].inventory = this;
         }
@@ -33,9 +33,10 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0;i < slots.Length;i++)
         {
-            if (slots[i] != null)
+            if (slots[i].slotData != null)
             {
                 slots[i].SetSlot();
+
             }
             else
             {

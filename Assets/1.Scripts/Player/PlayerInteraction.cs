@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if(hit.collider.gameObject != facedGameObject)
             {
-                facedGameObject = hit.collider.gameObject;
+                facedGameObject = hit.collider.gameObject;           
                 facedItem = facedGameObject.GetComponent<Items>();
                 //Á¤º¸ ¶ç¿ì±â
                 FacedInfoUI();
