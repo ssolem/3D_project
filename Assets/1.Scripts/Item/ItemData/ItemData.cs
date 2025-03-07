@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
@@ -12,14 +13,19 @@ public enum ItemType
 public enum StatsAffect
 {
     Health,
-    Stamina
+    PassiveHealth, // playercondition hp.passivevalue
+    Stamina,
+    PassiveStamina //playercondition sp.passivevalue
 }
 
+[Serializable]
 public class AffectedStats
 {
     public StatsAffect affectType;
     public float affectValue;
 }
+
+[CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
     [Header("Item Info")]
@@ -29,8 +35,9 @@ public class ItemData : ScriptableObject
     public Sprite itemImage;
     public GameObject itemPrefab;
     public bool stackable;
-    public int itemCount;
+    public int maxStack;
 
     [Header("Affected Stats")]
     public AffectedStats[] affectedStats;
+
 }
