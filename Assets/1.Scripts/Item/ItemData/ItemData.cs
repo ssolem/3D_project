@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum ItemType
 {
@@ -32,7 +30,7 @@ public class ItemData : ScriptableObject
     public ItemType itemType;
     public string itemName;
     public string itemDescription;
-    public Sprite itemImage;
+    public Image itemImage;
     public GameObject itemPrefab;
     public bool stackable;
     public int maxStack;

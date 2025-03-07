@@ -58,16 +58,10 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(facedGameObject != null)
         {
-            GameManager.Instance.Player.itemData = facedItem.itemData;
-            Destroy(facedGameObject);
+            facedItem.SendToInventory();
             facedGameObject = null;
             facedItem = null;
             infoText.gameObject.SetActive(false);
         }
-    }
-
-    void ToInventory()
-    {
-
     }
 }
