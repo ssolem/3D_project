@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,6 +7,7 @@ public class Inventory : MonoBehaviour
 
     public Transform slotBoard;
 
+    private bool inventoryState = false;
 
     void Start()
     {
@@ -16,7 +15,7 @@ public class Inventory : MonoBehaviour
 
         slots = new Slot[slotBoard.childCount];
 
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             slots[i] = slotBoard.GetChild(i).GetComponent<Slot>(); //GetChild ±î¸ÔÁö ¸»±â..
             slots[i].index = i;
@@ -26,12 +25,12 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void UpdateSlot()
     {
-        for(int i = 0;i < slots.Length;i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].slotData != null)
             {
@@ -49,10 +48,10 @@ public class Inventory : MonoBehaviour
     {
         ItemData data = GameManager.Instance.Player.itemData;
 
-        if(data.stackable)
+        if (data.stackable)
         {
             Slot filledSlot = GetFilledSlot(data);
-            if(filledSlot != null )
+            if (filledSlot != null)
             {
                 filledSlot.quantity++;
                 UpdateSlot();
@@ -63,7 +62,7 @@ public class Inventory : MonoBehaviour
         else
         {
             Slot emptySlot = GetEmptySlot();
-            if(emptySlot != null)
+            if (emptySlot != null)
             {
                 emptySlot.slotData = data;
                 emptySlot.quantity = 1;
@@ -90,11 +89,37 @@ public class Inventory : MonoBehaviour
 
     Slot GetFilledSlot(ItemData data)
     {
-        for(int i =0; i< slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].slotData == data)
-                return slots[i];
+            {
+                if (slots[i].quantity < data.maxStack || data.itemType == ItemType.Equip)
+                {
+                    return slots[i];
+                }
+            }
         }
         return null;
+    }
+    public void OnInventory(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            SetInventory();
+        }
+    }
+
+    void SetInventory()
+    {
+        if (!inventoryState)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+
+        inventoryState = !inventoryState;
     }
 }

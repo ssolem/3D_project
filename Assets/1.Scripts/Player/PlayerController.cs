@@ -112,7 +112,6 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
-
     public void OnInteract(InputAction.CallbackContext context)
     {
         if(context.phase == InputActionPhase.Started)
