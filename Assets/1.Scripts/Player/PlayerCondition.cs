@@ -22,6 +22,26 @@ public class PlayerCondition : MonoBehaviour
         PassiveDamage();
     }
 
+    public void AddPassiveHealth(float value)
+    {
+        hp.AddPassive(value);
+    }
+
+    public void SubtractPassiveHealth(float value)
+    {
+        hp.SubtractPassive(value);
+    }
+
+    public void AddPassiveStamina(float value)
+    {
+        sp.AddPassive(value);
+    }
+
+    public void SubtractPassiveStamina(float value)
+    {
+        sp.SubtractPassive(value);
+    }
+
     public void HealStamina(float value)
     {
         sp.Add(value);

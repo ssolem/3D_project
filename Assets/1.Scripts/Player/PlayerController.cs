@@ -32,8 +32,21 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
         Move();
-        Look();
+        Look();    
+        }
+    }
+
+    public void EnableMouseControl()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void DisableMouseControl()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Move()

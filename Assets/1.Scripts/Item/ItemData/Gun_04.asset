@@ -22,4 +22,4 @@ MonoBehaviour:
   maxStack: 0
   affectedStats:
   - affectType: 1
-    affectValue: 2
+    affectValue: -2

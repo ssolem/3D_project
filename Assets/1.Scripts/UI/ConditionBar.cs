@@ -37,4 +37,15 @@ public class ConditionBar : MonoBehaviour
     {
         currentValue = currentValue - value > 0 ? currentValue - value : 0;
     }
+
+    public void AddPassive(float value)
+    {
+        passiveValue = passiveValue + value;
+    }
+
+    public void SubtractPassive(float value)
+    {
+        passiveValue = passiveValue - value;
+    }
 }
+
