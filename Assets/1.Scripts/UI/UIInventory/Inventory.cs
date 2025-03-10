@@ -134,11 +134,13 @@ public class Inventory : MonoBehaviour
         if (!inventoryState)
         {
             this.gameObject.SetActive(true);
+            GameManager.Instance.Player.camControl.ChangeToInvenPer();
             GameManager.Instance.Player.controller.EnableMouseControl();
         }
         else
         {
             this.gameObject.SetActive(false);
+            GameManager.Instance.Player.camControl.ChangeFromInvenPer();
             GameManager.Instance.Player.controller.DisableMouseControl();
             ClearInventory();
         }

@@ -1,29 +1,20 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
     public CinemachineVirtualCamera firstPer;
     public CinemachineVirtualCamera thirdPer;
+    public CinemachineVirtualCamera invenPer;
     public LayerMask player;
     public LayerMask every;
     public float cullTimePlayer;
     public float cullTimeEvery;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void ChangePlayerPer()
     {
+        if (invenPer.gameObject.activeSelf)
+            return;
         if (firstPer.gameObject.activeSelf)
         {
             firstPer.gameObject.SetActive(false);
@@ -34,6 +25,24 @@ public class CameraControl : MonoBehaviour
         firstPer.gameObject.SetActive(true);
         Invoke("CullMaskPlayer", cullTimePlayer);
 
+    }
+
+    public void ChangeToInvenPer()
+    {
+        invenPer.gameObject.SetActive(true);
+        if(Camera.main.cullingMask != every)
+        {
+            Invoke("CullMaskEvery", cullTimeEvery);
+        }
+    }
+
+    public void ChangeFromInvenPer()
+    {
+        invenPer.gameObject.SetActive(false);
+        if(firstPer.gameObject.activeSelf)
+        {
+            Invoke("CullMaskPlayer", cullTimePlayer);
+        }
     }
 
     void CullMaskPlayer()
