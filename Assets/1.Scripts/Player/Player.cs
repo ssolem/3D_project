@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public PlayerController controller;
     public PlayerCondition condition;
+    public CameraControl camControl;
 
     public ItemData itemData;
     public Action interact;
@@ -18,5 +19,6 @@ public class Player : MonoBehaviour
         GameManager.Instance.Player = this;
         controller = GetComponent<PlayerController>();
         condition = GetComponent<PlayerCondition>();
+        camControl = Camera.main.GetComponent<CameraControl>();
     }
 }

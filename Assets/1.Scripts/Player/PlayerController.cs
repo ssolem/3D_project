@@ -132,4 +132,12 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.Player.interact.Invoke();
         }
     }
+
+    public void OnView(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Started)
+        {
+            GameManager.Instance.Player.camControl.ChangePlayerPer();
+        }
+    }
 }
