@@ -33,6 +33,7 @@ public class ItemData : ScriptableObject
     public GameObject itemPrefab;
     public bool stackable;
     public int maxStack;
+    public GameObject EquipPrefab;
 
     [Header("Affected Stats")]
     public AffectedStats[] affectedStats;

@@ -26,6 +26,7 @@ public class Inventory : MonoBehaviour
     private bool isEquipped;
 
     private PlayerCondition condition;
+    public EquipItems equipItems;
 
     void Start()
     {
@@ -253,6 +254,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
+        equipItems.Equip(selectedSlotItem);
         slots[selectedSlotItemIndex].equipped = true;
         isEquipped = true;
         SetInventoryAction();
@@ -279,6 +281,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
+        equipItems.Unequip();
         slots[index].equipped = false;
         isEquipped = false;
         SetInventoryAction();

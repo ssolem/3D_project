@@ -20,6 +20,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 7466166155806342475, guid: bfd57335b0dcbc8418c61f9ce33cf1d2, type: 3}
   stackable: 0
   maxStack: 0
+  EquipPrefab: {fileID: 7376647887043869100, guid: b8ff2c8c033d0dd49aa65e658feeeb79, type: 3}
   affectedStats:
   - affectType: 1
     affectValue: -2
